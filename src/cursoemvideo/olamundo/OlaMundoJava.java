@@ -6,17 +6,18 @@
 package cursoemvideo.olamundo;
 
 /**
- *
+ * Classe OlaMundoJava
  * @author luiz
  */
-public class OlaMundoJava extends javax.swing.JFrame {
-
+public class OlaMundoJava extends javax.swing.JFrame 
+{
     /**
      * Creates new form OlaMundoJava
      */
-    public OlaMundoJava() {
+    public OlaMundoJava() 
+    {
         initComponents();
-    }
+    }// end OlaMundoJava()
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -27,16 +28,21 @@ public class OlaMundoJava extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        lblMensagem = new javax.swing.JLabel();
+        btnClick = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setFont(new java.awt.Font("Ubuntu", 0, 18)); // NOI18N
-        jLabel1.setText("Aqui vai aparecer a mensagem");
+        lblMensagem.setFont(new java.awt.Font("Ubuntu", 0, 18)); // NOI18N
+        lblMensagem.setText("Aqui vai aparecer a mensagem");
 
-        jButton1.setFont(new java.awt.Font("Ubuntu", 0, 16)); // NOI18N
-        jButton1.setText("Clique");
+        btnClick.setFont(new java.awt.Font("Ubuntu", 0, 16)); // NOI18N
+        btnClick.setText("Clique");
+        btnClick.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnClickActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -44,30 +50,36 @@ public class OlaMundoJava extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap(38, Short.MAX_VALUE)
-                .addComponent(jLabel1)
+                .addComponent(lblMensagem)
                 .addGap(33, 33, 33))
             .addGroup(layout.createSequentialGroup()
-                .addGap(127, 127, 127)
-                .addComponent(jButton1)
+                .addGap(102, 102, 102)
+                .addComponent(btnClick, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(69, Short.MAX_VALUE)
-                .addComponent(jLabel1)
+                .addComponent(lblMensagem)
                 .addGap(18, 18, 18)
-                .addComponent(jButton1)
-                .addGap(61, 61, 61))
+                .addComponent(btnClick, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(53, 53, 53))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btnClickActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClickActionPerformed
+        // TODO add your handling code here:
+        lblMensagem.setText("Olá, Mundo!");
+    }//GEN-LAST:event_btnClickActionPerformed
+
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
+    public static void main(String args[]) 
+    {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -93,14 +105,15 @@ public class OlaMundoJava extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
+            public void run() 
+            {
                 new OlaMundoJava().setVisible(true);
-            }
+            }// end run()
         });
-    }
+    }// end main()
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton btnClick;
+    private javax.swing.JLabel lblMensagem;
     // End of variables declaration//GEN-END:variables
-}
+}// end class
